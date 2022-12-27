@@ -1,8 +1,18 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Code Documentation
+description: A memory sink for all things important
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: "https://github.com/sonukuldeep/codedocs"
 
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "/assets/images/favicon.ico"
+
+plugins:
+- jekyll-seo-tag
+
+# Aux links for the upper right navigation
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "Visit my GitHub Profile":
+  - "https://github.com/sonukuldeep"
+
+
