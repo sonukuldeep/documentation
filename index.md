@@ -1,30 +1,79 @@
 ---
-title: Home
+title: home
 layout: home
 ---
+<html lang="en">
+<link rel="stylesheet" href="https://codepen.io/utbaz/pen/MWGygLe?editors=0100.css">
+<body>
+		<div class="cal__main">
+			<span class="background"></span>
+			<span class="background1"></span>
+			<span class="background2"></span>
+			<h1>glassalendar</h1>
+            <p>by Utba Zafar</p>
+			<div class="cal__container">
+				<div class="calendar__top">
+					<span class="arrow" id="back__arrow"><</span>
+					<div class="calendar__day">
+						<span class="cal__month" id="cal__month"></span>
+						<span class="cal__date" id="cal__date"></span>
+					</div>
+					<div class="calendar__time">
+						<span class="cal__time" id="cal__time"></span>
+					</div>
+					<span class="arrow" id="next__arrow">></span>
+				</div>
+				<div class="calendar__bottom">
+					<div class="cal__weekdays" id="cal__weekdays">
+				</div>
+					<div class="cal__days" id="cal__days"></div>
+				</div>
+			</div>
+		</div>
+        <script>
+            const newMonth = document.getElementById('cal__month');
+const dateDisplay = document.getElementById('cal__date');
+const allDates = document.getElementById('cal__days');
+const prevBtn = document.getElementById('back__arrow');
+const nxtBtn = document.getElementById('next__arrow');
+const timeDisplay = document.getElementById('cal__time');
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+const date = new Date();
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+// Current Date Display
+currentDate = () => {
+	const twelveMonths = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	];
 
-More specifically, the created site:
+	const sevenDays = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	];
+	const date__weekDay = sevenDays[date.getDay()];
+	const date__day = date.getDate();
+	const date__year = date.getFullYear();
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
-
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
-
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
-
-To get started with creating a site, just click "[use this template]"!
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+	newMonth.innerHTML = twelveMonths[date.getMonth()];
+	dateDisplay.innerHTML = `${date__weekDay} ${date__day}, ${date__year}`;
+};
+currentDate();
+        </script>
+	</body>
+</html>

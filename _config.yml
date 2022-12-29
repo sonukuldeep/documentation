@@ -1,8 +1,8 @@
 title: My Doc Website
 description: A memory hole for all my codes
 theme: just-the-docs
-baseurl: "sonukuldeep"
+baseurl: ""
 url: "github.io"
-
+favicon_ico: "/assets/images/favicon.ico"
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Visit My Repo: https://github.com/sonukuldeep
