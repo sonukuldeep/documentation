@@ -10,9 +10,17 @@ layout: home
 npx create-next-app --typescript --example with-styled-components my-app
 ```
 
+<hr>
+
 ### Next js with sass and open-props
 ```bash
 npx create-next-app --typescript my-app
 cd my-app
 npm install -D open-props sass
 ```
+
+<hr>
+
+### <u>Good read recommendation</u>
+
+- [Grid auto columns](https://css-tricks.com/almanac/properties/g/grid-template-columns/)
