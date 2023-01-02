@@ -11,6 +11,10 @@ layout: home
 
 - [Grid auto columns](https://css-tricks.com/almanac/properties/g/grid-template-columns/)
 
-## Javascript Promises
+## Javascript Async Await
 
-- [Promises](https://blog.webdevsimplified.com/2021-11/async-await/)
+- [Async await](https://blog.webdevsimplified.com/2021-11/async-await/)
+
+## Javascript Promise
+
+- [Promise](https://blog.webdevsimplified.com/2021-09/javascript-promises/)
