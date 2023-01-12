@@ -1,9 +1,12 @@
 ---
 title: Snippets
 layout: home
+toc: true
 ---
 
 ![hero](./assets/images/0991248287.PT02_1200x1200.webp)
+
+# Useful snippets and links
 
 ### Next js with styled-components
 ```bash
@@ -160,3 +163,8 @@ function ContactForm() {
 }
 ```
 [source](https://daveceddia.com/react-forms/)
+
+
+### How to detect click outside React component ?
+
+[source](https://www.geeksforgeeks.org/how-to-detect-click-outside-react-component/)
