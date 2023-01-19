@@ -35,7 +35,7 @@ parent.addEventListener("click", function(event) {
 
 In this example, when the user clicks on the grandchild element, the event will be first handled by the grandchild element's event listener and logs "Grandchild clicked!" to the console. Then, the event will bubble up to the parent elements, the child and parent element's event listener, where it will also be handled by each event listener respectively. So the event listener of the child element will log "Child clicked!" and the event listener of the parent element will log "Parent clicked!" to the console.
 
-It's worth noting that when an event is handled by an element's event listener, it will be passed up the DOM tree to its parent element's event listener regardless of whether the event was handled or not. However, you can stop the event bubbling by calling the event.stopPropagation() method which will prevent the event from being passed up the DOM tree.
+It's worth noting that when an event is handled by an element's event listener, it will be passed up the DOM tree to its parent element's event listener regardless of whether the event was handled or not. However, you can stop the event bubbling by calling the <u>event.stopPropagation()</u> method which will prevent the event from being passed up the DOM tree.
 
 It's also important to note that the order of event handling is in the order of the DOM tree hierarchy, it starts from the innermost element to the outermost element.
 
