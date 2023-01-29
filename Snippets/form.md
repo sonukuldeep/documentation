@@ -105,36 +105,31 @@ function NoRefsForm() {
 }
 ```
 
-#### Form in react with uncontrolled inputs using useRef
+*Typescript varient*
+
 ```jsx
-function ContactForm() {
-  const nameRef = React.useRef();
-  const emailRef = React.useRef();
-  const messageRef = React.useRef();
+function NoRefsForm() {
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    console.log('email', form.email, form.elements.email);
+    console.log('name', form.name, form.elements.name);
+  }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          ref={nameRef}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email address</label>
         <input
           id="email"
-          type="email"
-          ref={emailRef}
+          name="email"
         />
       </div>
       <div>
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          ref={messageRef}
+        <label htmlFor="name">Full Name</label>
+        <input
+          id="name"
+          name="name"
         />
       </div>
       <button type="submit">Submit</button>
@@ -143,7 +138,41 @@ function ContactForm() {
 }
 ```
 
-Typescript varient 
+
+#### Form in react with uncontrolled inputs using useRef
+```jsx
+function NoRefsForm() {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    console.log('email', form.email.value);
+    console.log('name', form.fname.value);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+        />
+      </div>
+      <div>
+        <label htmlFor="fname">Full Name</label>
+        <input
+          id="fname"
+          name="fname"
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+*Typescript varient*
+
 ```jsx
 function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null)
