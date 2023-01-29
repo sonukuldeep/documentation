@@ -142,4 +142,43 @@ function ContactForm() {
   );
 }
 ```
+
+Typescript varient 
+```jsx
+function ContactForm() {
+  const nameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
+
+  return (
+    <form>
+      <div>
+        <label htmlFor="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          ref={nameRef}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          ref={emailRef}
+        />
+      </div>
+      <div>
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          ref={messageRef}
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+```
 [source](https://daveceddia.com/react-forms/)
