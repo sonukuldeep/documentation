@@ -8,14 +8,21 @@ parent: Typescript Fundamentals
 
 ## Common stuff
 
-```ts
+```tsx
 const name: string = 'your name'
+
+const fun:({name: string}) => void = ({name}) => {}
+or
+const fun = ({name}:{name: string}): void => {}
+
 const fun: (a: number, b: number) => boolean = (a,b) => {return true}
+or
+const fun: (a: number, b: number): boolean => { return true }
 ```
 
 ## Interface
 
-```ts
+```tsx
 interface IProps {
     name: string
     age: number
@@ -24,7 +31,7 @@ interface IProps {
 
 ### Extends
 
-```ts
+```tsx
 interface IFunProps {
     fun: (a: string) => void //function type
 }
@@ -37,7 +44,7 @@ interface IProps extends IFunProps {
 
 ### Interface overload
 
-```ts
+```tsx
 interface IProps {
     name: string
     age: number
@@ -50,7 +57,7 @@ interface IProps {
 
 This is same as below
 
-```ts
+```tsx
 interface IProps {
     name: string
     age: number
@@ -60,7 +67,7 @@ interface IProps {
 
 ## Type
 
-```ts
+```tsx
 type Props = {
     name: string
     age: number
@@ -70,7 +77,7 @@ type Props = {
 
 ### Union
 
- ```ts
+ ```tsx
  type USAddress = {
     street: string
     state: string
