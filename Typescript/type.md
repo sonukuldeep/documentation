@@ -3,7 +3,7 @@
 Ex-1
 ```tsx
 type typename = {
-name: String
+name: string
 }
 ```
 
@@ -43,4 +43,18 @@ type DebitCard = {
 };
 
 type PaymentMethod = CreditCard | DebitCard;
+```
+
+Ex-4
+```tsx
+type Book = {
+  title: string;
+  price: number;
+};
+
+type Author = {
+  name: string;
+  email: string;
+  books: Book[];
+};
 ```
