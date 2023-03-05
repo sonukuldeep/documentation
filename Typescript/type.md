@@ -47,6 +47,19 @@ type PaymentMethod = CreditCard | DebitCard;
 
 Ex-4
 ```tsx
+type Fruit = {
+    sweet: boolean
+}
+
+type Vegetable = {
+    berry: boolean
+}
+
+type Tomato = Fruit & Vegetable
+```
+
+Ex-5
+```tsx
 type Book = {
   title: string;
   price: number;
