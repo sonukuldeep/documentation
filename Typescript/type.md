@@ -1,11 +1,13 @@
 # Basic
 
+Ex-1
 ```tsx
 type typename = {
 name: String
 }
 ```
 
+Ex-2
 ```tsx
 type IdProps = {
   id: string,
@@ -22,4 +24,23 @@ const list: IdProps[] = [
     display: 'Bar Select'
   },
 ]
+```
+
+Ex-3
+```tsx
+type CreditCard = {
+  number: number;
+  cardholder: string;
+  expirationDate: Date;
+  secutiryCode: number;
+};
+
+type DebitCard = {
+  number: number;
+  cardholder: string;
+  expirationDate: Date;
+  secutiryCode: number;
+};
+
+type PaymentMethod = CreditCard | DebitCard;
 ```
