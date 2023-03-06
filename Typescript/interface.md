@@ -4,7 +4,7 @@ layout: home
 parent: Typescript Fundamentals
 ---
 
-# examples
+# Examples
 
 ```tsx
 Interface InumberArray {
