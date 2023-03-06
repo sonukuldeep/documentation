@@ -1,3 +1,9 @@
+---
+title: Enums
+layout: home
+parent: Typescript Fundamentals
+---
+
 # Basics
  
 ```tsx
