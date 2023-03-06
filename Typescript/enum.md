@@ -46,4 +46,4 @@ const enum Light {
 ```
 
 * const enum references are replaced by inline codes. For example, console.log(Light.Red) is compiled as console.log(0 /* Red */).
-* If there is no JavaScript object that associates with const enum is generated at run time, it is not possible to loop over the const enum values.
+* Because there is no JavaScript object that associates with const enum is generated at run time, it is not possible to loop over the const enum values.
