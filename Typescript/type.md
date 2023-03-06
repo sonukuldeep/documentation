@@ -1,3 +1,10 @@
+---
+title: Types
+layout: home
+parent: Typescript Fundamentals
+---
+
+
 # Basic
 
 Ex-1
