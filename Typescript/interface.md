@@ -10,7 +10,7 @@ parent: Typescript Fundamentals
 Interface InumberArray {
  myVar: number[];
 }
-
+```
 
 ## Extends
 ```tsx
