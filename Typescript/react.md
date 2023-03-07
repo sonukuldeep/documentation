@@ -24,6 +24,7 @@ const App = ({ message }: { message: string }) => <div>{message}</div>;
 ## useRef
 
 In TypeScript, useRef returns a reference that is either read-only or mutable, depends on whether your type argument fully covers the initial value or not. Choose one that suits your use case.
+
 Option 1: DOM element ref
 
 To access a DOM element: provide only the element type as argument, and use null as initial value. In this case, the returned reference will have a read-only .current that is managed by React. TypeScript expects you to give this ref to an element's ref prop:
