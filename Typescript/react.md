@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Typescript React
-parent:
+parent: Typescript Fundamentals
 ---
 
 # React props with ts
