@@ -78,3 +78,30 @@ function Foo() {
   return <button onClick={/* clearInterval the ref */}>Cancel timer</button>;
 }
 ```
+
+## Class Components
+
+Within TypeScript, React.Component is a generic type (aka React.Component<PropType, StateType>), so you want to provide it with (optional) prop and state type parameters:
+
+```tsx
+type MyProps = {
+  // using `interface` is also ok
+  message: string;
+};
+type MyState = {
+  count: number; // like this
+};
+class App extends React.Component<MyProps, MyState> {
+  state: MyState = {
+    // optional second annotation for better type inference
+    count: 0,
+  };
+  render() {
+    return (
+      <div>
+        {this.props.message} {this.state.count}
+      </div>
+    );
+  }
+}
+```
