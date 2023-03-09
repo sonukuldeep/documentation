@@ -70,7 +70,7 @@ Solidity supports both C-style and C++-style comments, Thus −
 
     Any text between the characters /* and */ is treated as a comment. This may span multiple lines.
 
-Example
+Example:-
 
 The following example shows how to use comments in Solidity.
 ```c++
