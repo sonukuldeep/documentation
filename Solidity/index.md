@@ -63,6 +63,7 @@ has_children: true
 </tr>
 <table>
 
+
 ## Comments
 Solidity supports both C-style and C++-style comments, Thus −
 
