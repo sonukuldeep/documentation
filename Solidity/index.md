@@ -61,8 +61,7 @@ has_children: true
 <td>typeof</td>
 <td>unchecked</td>
 </tr>
-<table>
-
+</table>
 
 ## Comments
 Solidity supports both C-style and C++-style comments, Thus −
