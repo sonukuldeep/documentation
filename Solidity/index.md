@@ -1,6 +1,7 @@
 ---
-layout:home
-title:Solidity
+layout: home
+title: Solidity
+has_children: true
 ---
 
 # Solidity
