@@ -10,10 +10,10 @@ title: Array
 * In case of memory array, element type can not be mapping and in case it is to be used as function parameter then element type should be an ABI type.
 
 ### Array declaration
-* Fixed type
-* Dynamic type
+* Fixed array
+* Dynamic array
 
-#### Fixed type
+#### Fixed array
 ```c++
 type arrayName [ arraySize ];
 ```
@@ -27,10 +27,12 @@ uint balance[10];
 To declare an array of dynamic size in Solidity, the programmer specifies the type of the elements as follows
 ```c++
 type[] arrayName;
+
+uint[] memory a;
 ```
 
 ### Initialisation
-* Fixed size
+* Fixed array
 ```c++
 uint balance[3] = [1, 2, 3];
 uint balance[] = [1, 2, 3];
