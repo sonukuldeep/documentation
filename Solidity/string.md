@@ -27,3 +27,13 @@ contract SolidityTest {
    bytes32 data = "test";
 }
 ```
+
+### Bytes to String Conversion
+
+Bytes can be converted to String using string() constructor.
+
+Syntax:
+```c++
+bytes memory bstr = new bytes(10);
+string message = string(bstr);
+```
