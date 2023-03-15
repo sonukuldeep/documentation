@@ -1,6 +1,6 @@
 ---
 layout: home
-title: conditional
+title: Conditional
 parent: Solidity
 ---
 

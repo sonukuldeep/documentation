@@ -1,6 +1,6 @@
 ---
 layout: home
-title: struct
+title: Struct
 parent: Solidity
 ---
 

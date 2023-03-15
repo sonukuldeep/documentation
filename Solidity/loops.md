@@ -1,7 +1,7 @@
 ---
 layout: home
 parent: Solidity
-title: loops
+title: Loops
 ---
 
 ## Loops
