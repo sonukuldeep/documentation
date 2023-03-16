@@ -18,3 +18,18 @@ Solidity offers the programmer a rich assortment of built-in as well as user def
 |Integer | int/uint |Signed and unsigned integers of varying sizes.|
 |Interger | int8 to int256 | Signed int from 8 bits to 256 bits. int256 is the same as int.|
 |Integer|int8 to int256|Unsigned int from 8 bits to 256 bits. uint256 is the same as uint.|
+|Fixed Point Numbers|fixed/unfixed|Signed and unsigned fixed point numbers of varying sizes.|
+|Fixed Point Numbers|fixed/unfixed|Signed and unsigned fixed point numbers of varying sizes.|
+|Fixed Point Numbers|fixedMxN| 	Signed fixed point number where M represents number of bits taken by type and N represents the decimal points. M should be divisible by 8 and goes from 8 to 256. N can be from 0 to 80. fixed is same as fixed128x18.|
+|Fixed Point Numbers|ufixedMxN|Unsigned fixed point number where M represents number of bits taken by type and N represents the decimal points. M should be divisible by 8 and goes from 8 to 256. N can be from 0 to 80. ufixed is same as ufixed128x18.|
+
+Note: You can also represent the signed and unsigned fixed-point numbers as fixedMxN/ufixedMxN where M represents the number of bits taken by type and N represents the decimal points. M should be divisible by 8 and goes from 8 to 256. N can be from 0 to 80.
+
+
+### Address
+Address holds the 20 byte value representing the size of an Ethereum address. An address can be used to get the balance using .balance method and can be used to transfer balance to another address using .transfer method.
+```c++
+address x = 0x212;
+address myAddress = this;
+if (x.balance < 10 && myAddress.balance >= 10) x.transfer(10);
+```
