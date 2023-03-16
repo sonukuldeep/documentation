@@ -7,11 +7,11 @@ title: Variables
 
 Solidity supports three types of variables.
 
-    State Variables − Variables whose values are permanently stored in a contract storage.
+* State Variables − Variables whose values are permanently stored in a contract storage.
 
-    Local Variables − Variables whose values are present till function is executing.
+* Local Variables − Variables whose values are present till function is executing.
 
-    Global Variables − Special variables exists in the global namespace used to get information about the blockchain.
+* Global Variables − Special variables exists in the global namespace used to get information about the blockchain.
 
 Solidity is a statically typed language, which means that the state or local variable type needs to be specified during declaration. Each declared variable always have a default value based on its type. There is no concept of "undefined" or "null".
 
@@ -69,21 +69,21 @@ These are special variables which exist in global workspace and provide informat
 
 While naming your variables in Solidity, keep the following rules in mind.
 
-    You should not use any of the Solidity reserved keywords as a variable name. These keywords are mentioned in the next section. For example, break or boolean variable names are not valid.
+* You should not use any of the Solidity reserved keywords as a variable name. These keywords are mentioned in the next section. For example, break or boolean variable names are not valid.
 
-    Solidity variable names should not start with a numeral (0-9). They must begin with a letter or an underscore character. For example, 123test is an invalid variable name but _123test is a valid one.
+* Solidity variable names should not start with a numeral (0-9). They must begin with a letter or an underscore character. For example, 123test is an invalid variable name but _123test is a valid one.
 
-    Solidity variable names are case-sensitive. For example, Name and name are two different variables.
+* Solidity variable names are case-sensitive. For example, Name and name are two different variables.
 
 ## Variable scope
 
 Scope of local variables is limited to function in which they are defined but State variables can have three types of scopes.
 
-    Public − Public state variables can be accessed internally as well as via messages. For a public state variable, an automatic getter function is generated.
+* Public − Public state variables can be accessed internally as well as via messages. For a public state variable, an automatic getter function is generated.
 
-    Internal − Internal state variables can be accessed only internally from the current contract or contract deriving from it without using this.
+* Internal − Internal state variables can be accessed only internally from the current contract or contract deriving from it without using this.
 
-    Private − Private state variables can be accessed only internally from the current contract they are defined not in the derived contract from it.
+* Private − Private state variables can be accessed only internally from the current contract they are defined not in the derived contract from it.
 
 Example:-
 ```c++
