@@ -20,3 +20,6 @@ layout: home
 ## MongoDB
 
 - [MongoDB](https://blog.webdevsimplified.com/2022-02/mongo-db/)
+
+## Solidity resource
+- [Solidity examples](https://solidity-by-example.org/)
