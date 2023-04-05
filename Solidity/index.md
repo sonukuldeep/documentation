@@ -82,16 +82,24 @@ Example:-
 
 The following example shows how to use comments in Solidity.
 ```c++
-function getResult() public view returns(uint){
-   // This is a comment. It is similar to comments in C++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >= 0.7.0 < 0.9.0;
 
-   /*
-      * This is a multi-line comment in solidity
-      * It is very similar to comments in C Programming
-   */
-   uint a = 1;
-   uint b = 2;
-   uint result = a + b;
-   return result;
+contract LearnComments {
+
+   function getResult() public view returns(uint){
+      // This is a comment. It is similar to comments in C++
+   
+      /*
+         * This is a multi-line comment in solidity
+         * It is very similar to comments in C Programming
+      */
+      uint a = 1;
+      uint b = 2;
+      uint result = a + b;
+      return result;
+   }
+
 }
 ```
