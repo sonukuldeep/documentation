@@ -4,6 +4,10 @@ parent: Solidity
 title: Array
 ---
 
+# Array
+
+## Table of Contents
+
 ## Array
 * In Solidity, an array can be of compile-time fixed size or of dynamic size. 
 * For storage array, it can have different types of elements as well. 
@@ -92,4 +96,82 @@ contract test {
 }
 ```
 
+## Examples:
+
+### Example: 1
+```c++
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract LearnArray {
+    uint256[] public myArray;
+    uint256[] public myArray2; // empty array
+    uint256[200] public fixedArray; // fixed sixed array
+
+    // push it adds 1 or more element to the end of the array and returns the length
+
+    function push(uint256 number) public payable {
+        myArray.push(number);
+    }
+
+    // pop it remioves the last element from an array and returns that value
+    function pop() public payable {
+        myArray.pop();
+    }
+
+    function length() public view returns (uint256) {
+        return myArray.length;
+    }
+
+    function remove(uint256 i) public payable {
+        delete myArray[i];
+        // remember length will not change. internally the value will be replaced by 0
+    }
+
+    function getValue(uint256 _n) public view returns (uint256) {
+        if (_n >= myArray.length || _n < 0) {
+            return 1000;
+        } else {
+            return myArray[_n];
+        }
+    }
+}
+```
+
+### Exercise 2:
+```c++
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract ArrayExercise {
+    uint256[] public changeArray;
+
+    constructor() {
+        for (uint256 i = 1; i < 5; i++) {
+            changeArray.push(i);
+        }
+        delete changeArray[1];
+    }
+
+    function removeElement() public payable {
+        changeArray.pop();
+    }
+
+    function test() public payable {
+        for (uint256 i = 1; i < 5; i++) {
+            changeArray.push(i);
+        }
+    }
+
+    function show() public view returns (uint256[] memory) {
+        return changeArray;
+    }
+
+    function length() public view returns (uint256) {
+        return changeArray.length;
+    }
+}
+```
 
