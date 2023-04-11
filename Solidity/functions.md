@@ -13,7 +13,7 @@ function function-name(parameter-list) scope returns() {
    //statements
 }
 ```
-### Example:
+### Example 1:
 ```c++
 pragma solidity ^0.5.0;
 
@@ -24,6 +24,50 @@ contract Test {
       uint result = a + b;
       return result;
    }
+}
+```
+
+### Example 2:
+```c++
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract LearnFunctions {
+    // function functionName(parameter-list) scope return() { logic }
+
+    // local variable superceeds state variable
+    uint256 a = 45; // state variable
+
+    function addValues() public pure returns (uint256) {
+        uint256 a = 2; // local variable
+        uint256 b = 3;
+        uint256 c = a + b;
+        return c;
+    }
+
+    function addNewValues() public pure returns (uint256) {
+        uint256 a = 1;
+        uint256 b = 2;
+        uint256 c = a + b;
+        return c;
+    }
+
+    function multiplyCalculator(uint256 a, uint256 b)
+        public
+        pure
+        returns (uint256)
+    {
+        return a * b;
+    }
+
+    function divideCalculate(uint256 a, uint256 b)
+        public
+        pure
+        returns (uint256)
+    {
+        return a / b;
+    }
 }
 ```
 
