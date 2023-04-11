@@ -66,7 +66,10 @@ uint salary = balance[2];
 
 * push − push allows to append an element to a dynamic storage array at the end. It returns the new length of the array.
 
-Example:
+
+## Examples:
+
+### Example: 1
 ```c++
 pragma solidity ^0.5.0;
 
@@ -96,9 +99,7 @@ contract test {
 }
 ```
 
-## Examples:
-
-### Example: 1
+### Example: 2
 ```c++
 // SPDX-License-Identifier: GPL-3.0
 
@@ -139,7 +140,7 @@ contract LearnArray {
 }
 ```
 
-### Exercise 2:
+### Exercise 3:
 ```c++
 // SPDX-License-Identifier: GPL-3.0
 
