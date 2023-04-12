@@ -24,17 +24,22 @@ The function body is inserted where the special symbol "_;" appears in the defin
 
 See the example below −
 ```c++
-pragma solidity ^0.5.0;
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
 
 contract Owner {
    address owner;
    constructor() public {
       owner = msg.sender;
    }
-   modifier onlyOwner {
-      require(msg.sender == owner);
-      _;
+
+   modifier onlyOwner() {
+       // customizable logic to modify our function
+       require(msg.sender == owner, "message sender not equal to owner");
+       _; //mark the underscore followed by semi-colon. This means continue only if requirement is met.
    }
+
    modifier costs(uint price) {
       if (msg.value >= price) {
          _;
@@ -49,8 +54,11 @@ contract Register is Owner {
    function register() public payable costs(price) {
       registeredAddresses[msg.sender] = true;
    }
-   function changePrice(uint _price) public onlyOwner {
-      price = _price;
+ 
+   // onlyOwner is our function modifier that requires
+   // only the owner to be able to change the price
+   function changePrice(uint256 _price) public onlyOwner {
+       price = _price;
    }
 }
 ```
