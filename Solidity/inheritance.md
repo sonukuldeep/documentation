@@ -39,16 +39,56 @@ contract C {
    function compute(uint a, uint b) internal pure returns (uint) { return a + b; }
 }
 //Derived Contract
-contract E is C {
+contract E is C { // direct inheritenct
    uint private result;
-   C private c;
+   C private c; // inheritence using new keyword
    constructor() public {
       c = new C();
    }  
    function getComputedResult() public {      
-      result = compute(3, 5); 
+      result = compute(3, 5); // internal function available via direct inheritace using 'is' keyword
    }
    function getResult() public view returns(uint) { return result; }
    function getData() public view returns(uint) { return c.info(); }
+}
+```
+
+Example 2 
+```c++
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract C {
+    uint256 private data;
+    uint256 public info;
+
+    constructor() {
+        info = 10;
+    }
+
+    function increment(uint256 a) internal pure returns (uint256) {
+        return a + 1;
+    }
+
+    function duplicateData(uint256 a) public {
+        data = a;
+    }
+
+    function getData() public view returns (uint256) {
+        return data;
+    }
+
+    function campute(uint256 a, uint256 b) internal pure returns (uint256) {
+        return a + b;
+    }
+}
+
+contract D { 
+    C c = new C(); // only public state variable and functions are available using this method
+
+    function readInfo() public view returns (uint256) {
+        return c.info();
+    }
 }
 ```

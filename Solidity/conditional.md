@@ -43,3 +43,24 @@ if (expression 1) {
    Statement(s) to be executed if no expression is true
 }
 ```
+
+Example:
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract DecisionMaking {
+    uint256 orange = 5;
+ 
+    // one = sign assign value
+    function validateOrange() public view returns (bool) {
+        if (orange == 6) {
+            // 2 = signs equivalates value
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+```

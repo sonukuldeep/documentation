@@ -37,3 +37,62 @@ Syntax:
 bytes memory bstr = new bytes(10);
 string message = string(bstr);
 ```
+
+### String to byte Conversion
+
+String can be converted to bytes using bytes() constructor.
+
+Syntax:
+```c++
+bytes memory stringToBytes = bytes("Hello world");
+uint length = stringToBytes.length;
+```
+
+Example: 
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract LearnStrings {
+    string greetings = "Hello world";
+ 
+    function hello() public view returns (string memory) {
+        return greetings;
+    }
+ 
+    function change(string memory _change) public payable {
+        greetings = _change;
+    }
+ 
+    function getChar() public view returns (uint256) {
+        bytes memory stringToBytes = bytes(greetings);
+        return stringToBytes.length;
+    }
+}
+```
+
+Example 2
+
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract FavouriteColor {
+    string favouriteColor = "blue";
+ 
+    function returnColor() public view returns (string memory) {
+        return favouriteColor;
+    }
+ 
+    function changeString(string memory favColor) public payable {
+        favouriteColor = favColor;
+    }
+ 
+    function charlen() public view returns (uint256) {
+        bytes memory stringToByte = bytes(favouriteColor);
+        return stringToByte.length;
+    }
+}
+```
