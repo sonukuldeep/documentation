@@ -109,7 +109,8 @@ contract LearnArray {
     uint256[] public myArray;
     uint256[] public myArray2; // empty array
     uint256[200] public fixedArray; // fixed sixed array
-
+    uint256[] public numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    
     // push it adds 1 or more element to the end of the array and returns the length
 
     function push(uint256 number) public payable {
