@@ -8,7 +8,54 @@ parent: Solidity
 You can have multiple definitions for the same function name in the same scope. The definition of the function must differ from each other by the types and/or the number of arguments in the argument list. You cannot overload function declarations that differ only by return type.
 
 Following example shows the concept of a function overloading in Solidity.
-Example
+
+Example:- 1
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract LearnFunctionOverload {
+    function x(bool lightSwitch, uint256 wallet) public pure {
+        // do something here
+    }
+ 
+    function x(bool lightSwitch) public pure {
+        // do something here
+    }
+}
+```
+
+Example:- 2
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract LearnFunctionOverload {
+    function x(
+        uint256 _nu1,
+        uint256 _nu2,
+        uint256 _nu3
+    ) internal pure returns (uint256) {
+        return _nu1 + _nu2 + _nu3;
+    }
+ 
+    function x(uint256 _nu1, uint256 _nu2) internal pure returns (uint256) {
+        return _nu1 + _nu2;
+    }
+ 
+    function callxWith2Parameters() public pure returns (uint256) {
+        return x(1, 2);
+    }
+ 
+    function callxWith3Parameters() public pure returns (uint256) {
+        return x(1, 2, 3);
+    }
+}
+```
+
+Example:- 3
 ```c++
 pragma solidity ^0.5.0;
 
