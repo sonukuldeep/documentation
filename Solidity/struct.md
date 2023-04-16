@@ -36,12 +36,13 @@ struct Book {
 
 ### Accessing a Struct and its variable
 
-* We use the member access operator (.). 
+* We use the member access operator (.)
 * The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. 
 * You would use the struct to define variables of structure type. 
 
 The following example shows how to use a structure in a program.
 
+Example:-1
 ```c++
 pragma solidity ^0.5.0;
 
@@ -59,5 +60,35 @@ contract test {
    function getBookId() public view returns (uint) {
       return book.book_id;
    }
+}
+```
+
+Example:-2
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract LearnStruct {
+    struct Movie {
+        string director;
+        string title;
+        uint256 movie_id;
+    }
+    // struct acts as a new datatype  and we can assign it to variables like so
+    Movie movie;
+ 
+    function setMovie() public {
+        // assignment is done like so
+        movie = Movie("Blade runner", "Ridley scott", 1);
+    }
+ 
+    function getMovie() public view returns (Movie memory) {
+        return movie;
+    }
+ 
+    function getMovieId() public view returns (uint256) {
+        return movie.movie_id;
+    }
 }
 ```
