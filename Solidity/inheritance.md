@@ -15,7 +15,59 @@ Inheritance is a way to extend functionality of a contract. Solidity supports bo
 
 * In case of multiple inheritance, function call using super gives preference to most derived contract.
 
-Example
+
+Example:- 1
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract Base {
+    uint256 public data;
+ 
+    constructor(uint256 _data) {
+        data = _data;
+    }
+}
+ 
+contract Derived is Base {
+    constructor() Base(5) {}
+ 
+    function getData() public view returns (uint256) {
+        return data;
+    }
+}
+```
+Example:-2
+```c++
+// SPDX-License-Identifier: GPL-3.0
+ 
+pragma solidity >=0.7.0 <0.9.0;
+ 
+contract LedgerBalance {
+    mapping(address => uint256) balance;
+ 
+    function updateBalance(uint256 _i) public {
+        balance[msg.sender] = _i;
+    }
+ 
+    function getBalance() public view returns (uint256) {
+        return balance[msg.sender];
+    }
+}
+ 
+contract Updates {
+    function updatesBalance() public {
+        // instantiate
+        // ledgerBalance is new instance of Ledgerbalance
+        LedgerBalance ledgerBalance = new LedgerBalance();
+ 
+        ledgerBalance.updateBalance(30);
+    }
+}
+```
+
+Example:-3 
 ```c++
 pragma solidity ^0.5.0;
 
@@ -53,7 +105,7 @@ contract E is C { // direct inheritenct
 }
 ```
 
-Example 2 
+Example:-4
 ```c++
 // SPDX-License-Identifier: GPL-3.0
 
