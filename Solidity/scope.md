@@ -12,7 +12,7 @@ Scope in solidity
 
     external: can only be accessed from outside
 
-    internal: can be accessed from inside and if inherited using is keyword.
+    internal: can be accessed from inside and outside provided it is inherited using 'is' keyword.
 
 Example: 
 ```c++
