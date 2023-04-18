@@ -20,7 +20,7 @@ If the contract name is Congress and the library name is Owned, then their assoc
 Pascal case
 
 ## <u>Function name, function argument names, modifier names, local and state variables</u>
-camel case
+Camel case
 
 ## <u>Constants</u>
 All caps
