@@ -6,7 +6,7 @@ parent: Solidity
 
 ## Some common functions
 
-### State Variables
+### State Variables
 
 State variables are variables whose values are permanently stored in contract storage.
 ```c++
@@ -35,6 +35,7 @@ contract SimpleAuction {
     }
 }
 ```
+[more](https://sonukuldeep.github.io/Solidity/event.html)
 
 ### Errors
 
