@@ -76,6 +76,8 @@ contract Ballot {
     }
 }
 ```
+[more](https://sonukuldeep.github.io/Solidity/struct.html)
+
 ### Enum Types
 
 Enums can be used to create custom types with a finite set of ‘constant values’ 
@@ -87,4 +89,4 @@ contract Purchase {
     enum State { Created, Locked, Inactive } // Enum
 }
 ```
-
+[More](https://sonukuldeep.github.io/Solidity/enum.html)
