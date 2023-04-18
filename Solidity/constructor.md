@@ -20,17 +20,17 @@ Constructor is a special function declared using constructor keyword. It is an o
 * In case, no constructor is defined, a default constructor is present in the contract.
 
 ```c++
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.0;
 
 contract Test {
-   constructor() public {}
+   constructor() {}
 }
 ```
 In case, base contract have constructor with arguments, each derived contract have to pass them.
 
 Base constructor can be initialized directly using following way −
 ```c++
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.0;
 
 contract Base {
    uint data;
@@ -39,21 +39,21 @@ contract Base {
    }
 }
 contract Derived is Base (5) {
-   constructor() public {}
+   constructor() {}
 }
 ```
 Base constructor can be initialized indirectly using following way −
 ```c++
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.0;
 
 contract Base {
    uint data;
-   constructor(uint _data) public {
+   constructor(uint _data) {
       data = _data;   
    }
 }
 contract Derived is Base {
-   constructor(uint _info) Base(_info * _info) public {}
+   constructor(uint _info) Base(_info * _info) {}
 }
 ```
 Direct and Indirect ways of initializing base contract constructor is not allowed.
