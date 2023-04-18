@@ -66,6 +66,7 @@ uint salary = balance[2];
 
 * push − push allows to append an element to a dynamic storage array at the end. It returns the new length of the array.
 
+* pop − pop removes the last element from an array
 
 ## Examples:
 
