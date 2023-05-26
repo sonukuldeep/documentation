@@ -25,4 +25,4 @@ layout: home
 - [Solidity examples](https://solidity-by-example.org/)
 
 ## Detect element in focus
-- [Focus]https://www.htmlgoodies.com/javascript/javascript-element-focus/
+- [Focus](https://www.htmlgoodies.com/javascript/javascript-element-focus/)
