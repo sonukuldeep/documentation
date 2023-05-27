@@ -6,14 +6,15 @@ has_children: true
 
 # Rust
 
-![main image](wsrv.nl/?url=rust-lang.org/static/images/rust-social-wide.jpg&w=600)
+![main image](https://wsrv.nl/?url=rust-lang.org/static/images/rust-social-wide.jpg&w=600)
+
 [Docs](https://doc.rust-lang.org/book/ch00-00-introduction.html)
 Rust is a modern systems programming language known for its focus on safety, performance, and concurrency. It was developed by Mozilla Research and first released in 2010. 
 
 ## Installation
-[link](https://www.rust-lang.org/learn/get-started)
+[Link](https://www.rust-lang.org/learn/get-started)
 
-# Cargo
+## Cargo
 Cargo is the Rust build tool and package manager
 
 When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
