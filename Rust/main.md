@@ -20,6 +20,7 @@ Cargo is Rust’s build system and package manager. Most Rustaceans use this too
 
 ### Cargo commands
 1. cargo new
+
 ```rs
 cargo new <project name>
 
