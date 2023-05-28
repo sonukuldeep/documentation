@@ -14,13 +14,13 @@ Certainly! Here's a description of `let`, mutability, shadowing, and `const` in 
    - The type of the variable can be inferred by the compiler based on the assigned value, or it can be explicitly specified using type annotations.
    - Syntax: `let variable_name = value;`
 
-      Mutability:
+     - Mutability:
        - Rust promotes a default pattern of immutability for variables to ensure safer and more predictable code.
        - To create mutable variables, you need to explicitly declare them as mutable using the `let mut` syntax.
        - Mutable variables allow changing their values after assignment.
        - Syntax: `let mut variable_name = value;`
     
-      Shadowing:
+     - Shadowing:
        - Shadowing is the process of creating a new variable with the same name as an existing variable, effectively "shadowing" the original variable.
        - Shadowing allows you to reuse variable names while changing their type or value.
        - It is different from mutability because it creates a new variable rather than modifying the existing one.
