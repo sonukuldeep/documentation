@@ -19,7 +19,7 @@ The function body is wrapped in {}. Rust requires curly brackets around all func
 Cargo is Rust’s build system and package manager. Most Rustaceans use this tool to manage their Rust projects because Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. (We call the libraries that your code needs dependencies.)
 
 ### Cargo commands
-1. cargo new
+> cargo new
 
 ```rs
 cargo new <project name>
@@ -56,7 +56,7 @@ The last line, [dependencies], is the start of a section for you to list any of 
 
 Cargo expects your source files to live inside the src directory. The top-level project directory is just for README files, license information, configuration files, and anything else not related to your code. Using Cargo helps you organize your projects.
 
-2. cargo build
+> cargo build
 ```rs
 $ cargo build
    Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
@@ -70,7 +70,7 @@ $ ./target/debug/hello_cargo # or .\target\debug\hello_cargo.exe on Windows
 Hello, world!
 ```
 
-3. cargo run
+> cargo run
 ```rs
 cargo run // inside the project directory
 
@@ -82,7 +82,7 @@ cargo run // inside the project directory
 ```
 Using cargo run is more convenient than having to remember to run cargo build and then use the whole path to the binary, so most developers use cargo run.
 
-4. cargo check
+> cargo check
 ```rs
 $ cargo check
    Checking hello_cargo v0.1.0 (file:///projects/hello_cargo)
