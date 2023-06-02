@@ -24,5 +24,16 @@ layout: home
 ## Solidity resource
 - [Solidity examples](https://solidity-by-example.org/)
 
+## Motoko lang
+- [Docs](https://internetcomputer.org/docs/current/motoko/main/motoko)
+- [Community docs](https://github.com/motoko-unofficial/awesome-motoko#readme)
+
 ## Detect element in focus
 - [Javascript element focus](https://www.htmlgoodies.com/javascript/javascript-element-focus/)
+
+
+## Brad traversy Blog
+[Link](https://www.traversymedia.com/blog)
+
+## Web dev simplified Blog
+[Link](https://blog.webdevsimplified.com/)
