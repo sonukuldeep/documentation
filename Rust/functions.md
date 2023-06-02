@@ -1,7 +1,7 @@
 ---
 layout: home
 parent: Rust
-title: function
+title: Function
 ---
 
 ## Function

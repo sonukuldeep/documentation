@@ -17,7 +17,7 @@ const fun = ({name}:{name: string}): void => {}
 
 const fun: (a: number, b: number) => boolean = (a,b) => {return true}
 or
-const fun: (a: number, b: number): boolean => { return true }
+const fun = (a: number, b: number): boolean => { return true }
 ```
 
 ## Interface

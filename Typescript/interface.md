@@ -26,7 +26,7 @@ interface Dog extends Animal {
 }
 ```
 
-Eat is a function that takes food as an argument and does not return a value
+Eat is a function that takes food as an argument and does not return a value. <br/>
 Bark is also a function that doesn't take any argument and does not return a value
 Different ways to write a function in type script
 
