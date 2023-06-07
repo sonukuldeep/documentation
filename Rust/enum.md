@@ -1,3 +1,9 @@
+---
+layout: home
+title: Emum
+parent: Rust
+---
+
 ### Enums
 
 Use the word enum folled by a name to create an enum
