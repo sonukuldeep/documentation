@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Emum
+title: Enum
 parent: Rust
 ---
 
