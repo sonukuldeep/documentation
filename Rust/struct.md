@@ -3,18 +3,19 @@ parent: Rust
 title: Struct
 layout: home
 ---
+
 ## Struct
 Use the keyword struct followed by a name in order to create a struct
 
-    A type that's composed of other types
-    Can contain different types
-    It is further divided into 3 types
-       - Classic
-       - Tuple
-       - Unit
+A type that's composed of other types <br/>
+Can contain different types
 
-### Classic structs
+It is further divided into 3 types
+- Classic
+- Tuple
+- Unit
 
+1. Classic structs
 - Most commonly used
 - Each field has a name and a type
 
@@ -44,3 +45,4 @@ let car1 = Car {
 car1.year // return year 
 car1.make // return make
 ```
+
