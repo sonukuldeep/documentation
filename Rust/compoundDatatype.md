@@ -32,3 +32,4 @@ let tuple: (bool, u16, u8) = (true, 2, 3);
 
 let first_item = tuple.0;
 let error = tuple.100; // will give error
+```
