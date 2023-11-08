@@ -54,4 +54,22 @@ $output = floor(3.14); // outputs 3
  
 // square root
 $output = sqrt(2024);
+
+// pi
+$output = pi();
+ 
+// absolute
+$output = abs(-20);
+ 
+// max
+$output = max(1, 2, 3, 4, 5); // outputs 5
+$output = max([1, 10, 20, 50, 30]); // works on array too
+ 
+// min
+$output = min(1, 2, 3, 4, 5); // outputs 5
+$output = min([1, 10, 20, 50, 30]); // works on array too
+ 
+// number formatter
+$output = number_format(1000.120031, 2); // outputs 1,000.12
+?>
 ```
