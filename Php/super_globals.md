@@ -29,3 +29,16 @@ $queryString = $_SERVER['QUERY_STRING'] ?? '';
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 ?>
 ```
+
+## Get super global
+```php
+<?php
+ 
+echo isset($_GET["name"]) ? $_GET["name"] : "";
+ 
+echo $_GET["name"] ?? "";
+ 
+echo htmlspecialchars($_GET["name"] ?? "");
+ 
+?>
+```
