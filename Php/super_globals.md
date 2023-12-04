@@ -42,3 +42,19 @@ echo htmlspecialchars($_GET["name"] ?? "");
  
 ?>
 ```
+
+## Post super global
+```php
+<?php
+// print_r($_POST);
+ 
+$title = '';
+$description = '';
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+    global $title;
+    global $description;
+    $title = htmlspecialchars($_POST['title']);
+    $description = htmlspecialchars($_POST['description']);
+}
+```
