@@ -58,3 +58,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $description = htmlspecialchars($_POST['description']);
 }
 ```
+
+## Files super global
+```php
+<?php
+$title = '';
+$description = '';
+$submitted = false;
+$file = null;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+    $title = htmlspecialchars($_POST['title'] ?? '');
+    $description = htmlspecialchars($_POST['description'] ?? '');
+    $submitted = true;
+    $file = $_FILES['logo'];
+
+    if ($file['error'] === UPLOAD_ERR_OK) {
+        $uploadDir = 'uploads/';
+
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        $filename = uniqid() . '-' . $file['name'];
+        $allowedExtensions = ['jpg', 'jpeg', 'png'];
+        $fileExtension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+        if (in_array($fileExtension, $allowedExtensions)) {
+            if (move_uploaded_file($file['tmp_name'], $uploadDir . $filename)) {
+                echo 'File uploaded';
+            }
+        } else {
+            echo 'File not allowed';
+        }
+    }
+}
+?>
+```
