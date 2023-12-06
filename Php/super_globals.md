@@ -95,3 +95,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 }
 ?>
 ```
+
+## Session super global
+```php
+#index.php
+
+<?php
+ 
+session_start();
+ 
+$_SESSION['name'] = 'John';
+ 
+print_r($_SESSION);
+
+
+#checksession.php
+<?php
+session_start();
+ 
+if (isset($_SESSION['name']))
+    echo $_SESSION['name'];
+else echo "Not set";
+
+
+#destroy.php
+<?php
+session_start();
+ 
+// unsets name
+// unset($_SESSION['name']);
+ 
+// mostly used when using authentication
+session_destroy();
+```
