@@ -128,3 +128,24 @@ session_start();
 // mostly used when using authentication
 session_destroy();
 ```
+
+## Cookie super global
+```php
+#index.php
+<?php
+ 
+setcookie('username', 'jdoe', time() + 3600, '/');
+
+#checkcookie.php
+<?php
+ 
+$username =  ($_COOKIE['username']) ?? "Guest";
+ 
+?>
+ 
+<p>Welcome <?= $username ?></p>
+
+#destroycookie.php
+<?php
+setcookie('username', '', time() - 3600, '/');
+```
