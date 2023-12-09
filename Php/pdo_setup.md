@@ -29,3 +29,25 @@ try {
     echo 'connection failed' . $e->getMessage();
 }
 ```
+
+## Fetch multiple
+```php
+Fetch/get multiple
+
+<?php
+require "chapter72_connect_to_pdo.php";
+ 
+// Prepare a select statement
+$stmt = $pdo->prepare('SELECT * FROM posts');
+ 
+// Execute the statement
+$stmt->execute();
+ 
+// Fetch results
+$posts = $stmt->fetchAll();
+ 
+echo '<pre>';
+var_dump($results);
+echo '</pre>';
+?>
+```
