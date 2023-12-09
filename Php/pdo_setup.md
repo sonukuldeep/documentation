@@ -35,7 +35,7 @@ try {
 Fetch/get multiple
 
 <?php
-require "chapter72_connect_to_pdo.php";
+require "pdo.php";
  
 // Prepare a select statement
 $stmt = $pdo->prepare('SELECT * FROM posts');
@@ -50,4 +50,79 @@ echo '<pre>';
 var_dump($results);
 echo '</pre>';
 ?>
+```
+
+## Fetch single
+```php
+<?php
+require "pdo.php";
+ 
+$id = $_GET['id'] ?? null;
+ 
+if (!$id) {
+  header('location: index.php');
+  exit;
+}
+ 
+$sql = 'SELECT * FROM posts WHERE id = :id';
+ 
+$stmt = $pdo->prepare($sql);
+ 
+$params = ['id' => $id];
+ 
+$stmt->execute($params);
+ 
+$post = $stmt->fetch();
+ 
+?>
+```
+
+## Create new
+```php
+
+<?php
+require "pdo.php";
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+  $title = htmlspecialchars($_POST['title']);
+  $body = htmlspecialchars($_POST['body']);
+ 
+  $sql = 'INSERT INTO posts(title, body) VALUES (:title, :body)';
+ 
+  $stmt = $pdo->prepare($sql);
+ 
+  $params = [
+    'title' => $title,
+    'body' => $body
+  ];
+ 
+  $stmt->execute($params);
+ 
+  header('location: index.php');
+}
+ 
+?>
+```
+
+## Delete
+```php
+<?php
+require "chapter72_connect_to_pdo.php";
+ 
+$isDeleteRequest = $_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['_method'] ?? '' === 'delete');
+ 
+if ($isDeleteRequest) {
+    $id = $_POST['id'];
+ 
+    $sql = 'DELETE FROM posts WHERE id = :id';
+ 
+    $stmt = $pdo->prepare($sql);
+ 
+    $params = ['id' => $id];
+ 
+    $stmt->execute($params);
+ 
+    header('location: index.php');
+    exit;
+}
 ```
