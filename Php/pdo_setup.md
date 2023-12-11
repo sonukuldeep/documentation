@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 ## Delete
 ```php
 <?php
-require "chapter72_connect_to_pdo.php";
+require "pdo.php";
  
 $isDeleteRequest = $_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['_method'] ?? '' === 'delete');
  
