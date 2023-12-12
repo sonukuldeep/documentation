@@ -133,3 +133,47 @@ if ($isDeleteRequest) {
     <button type="submit" name="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none">Delete</button>
 </form>
 ```
+
+## Update
+```php
+require "chapter72_connect_to_pdo.php";
+ 
+$id = $_GET['id'] ?? null;
+ 
+if (!$id) {
+  header('location: index.php');
+  exit;
+}
+ 
+$sql = 'SELECT * FROM posts WHERE id = :id';
+ 
+$stmt = $pdo->prepare($sql);
+ 
+$params = ['id' => $id];
+ 
+$stmt->execute($params);
+ 
+$post = $stmt->fetch();
+ 
+// post operation
+$isPutRequest = $_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['_method'] ?? '' === 'put');
+ 
+if ($isPutRequest) {
+  $title = htmlspecialchars($_POST['title'] ?? '');
+  $body = htmlspecialchars($_POST['body'] ?? '');
+ 
+  $sql = 'UPDATE posts SET title = :title, body = :body WHERE id = :id';
+ 
+  $stmt = $pdo->prepare($sql);
+ 
+  $params = [
+    'title' => $title,
+    'body' => $body,
+    'id' => $id
+  ];
+ 
+  $stmt->execute($params);
+ 
+  header('location: index.php');
+  exit;
+```
