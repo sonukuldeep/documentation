@@ -176,4 +176,5 @@ if ($isPutRequest) {
  
   header('location: index.php');
   exit;
+}
 ```
