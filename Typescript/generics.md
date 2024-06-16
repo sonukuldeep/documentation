@@ -59,3 +59,34 @@ And you can define a box that contains a number like this:
 ```tsx
 const numberBox: Box<number> = { content: 42 };
 ```
+
+### Examples
+```tsx
+// Ex: 1
+const makeFetch = <T>(url: string): Promise<T> => {
+  return fetch(url).then((res) => res.json())
+}
+
+makeFetch<{ firstName: string }>("/api").then((res) => console.log(res))
+
+
+// Ex: 2
+const addIdToObject = <T>(obj: T) => {
+  return { ...obj, id: "123" }
+}
+
+const result = addIdToObject({ firstname: "Hello" })
+
+// Ex: 3
+type GetPromiseReturnType<T extends (...args: any) => any> = Awaited<
+  ReturnType<T>
+>
+
+// this works for variables awaiting a promise
+type Return1 = Awaited<Promise<string>>
+
+// Returntype exist for a function
+type Return2 = ReturnType<() => number>
+
+type Result = GetPromiseReturnType<() => Promise<{ firstname: string }>>
+```
